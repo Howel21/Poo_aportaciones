@@ -1,0 +1,72 @@
+CREATE TABLE public."Cuenta"
+(
+  descripcion character varying(30),
+  categoria_balance integer,
+  categoria_estado_resultado integer,
+  id_cuenta integer NOT NULL,
+  CONSTRAINT pk_id_cuenta PRIMARY KEY (id_cuenta)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public."Cuenta"
+  OWNER TO postgres;
+
+
+
+-- Table: public."Persona"
+
+-- DROP TABLE public."Persona";
+
+CREATE TABLE public."Persona"
+(
+  id character varying(15) NOT NULL,
+  nombre character varying(20),
+  apellido character varying(20),
+  fecha_nacimiento date,
+  CONSTRAINT pk_id_persona PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public."Persona"
+  OWNER TO postgres;
+
+
+- Table: public."Registro_Cuenta"
+
+-- DROP TABLE public."Registro_Cuenta";
+
+CREATE TABLE public."Registro_Cuenta"
+(
+  id_registro integer NOT NULL,
+  fecha_modificacion date,
+  saldo double precision,
+  id_cuenta integer NOT NULL,
+  debe double precision,
+  haber double precision,
+  CONSTRAINT pk_id_registro_registro PRIMARY KEY (id_cuenta, id_registro),
+  CONSTRAINT fk_cuenta_registro FOREIGN KEY (id_cuenta)
+      REFERENCES public."Cuenta" (id_cuenta) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public."Registro_Cuenta"
+  OWNER TO postgres;
+
+
+CREATE TABLE public."Usuario"
+(
+  contrasenia character varying(30),
+  tipo integer,
+  username character varying(30),
+  correo character varying
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public."Usuario"
+  OWNER TO postgres;
+

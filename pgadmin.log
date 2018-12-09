@@ -1,0 +1,89 @@
+ERROR  : 01:47:54: Error: Error connecting to the server: no se pudo traducir el nombre «postgres» a una dirección: Nombre o servicio desconocido
+
+ERROR  : 11:48:40: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 11:49:26: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:37:11: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:37:23: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:38:58: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:39:19: Error: ERROR:  error de sintaxis en o cerca de «AND»
+LÍNEA 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                         ^
+ERROR  : 12:39:58: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:44:14: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:44:41: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:45:43: Error: ERROR:  no existe la columna «amgettuple»
+LÍNEA 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                              ^
+ERROR  : 12:49:13: ERROR:  error de sintaxis en o cerca de «primary»
+LÍNEA 1: drop primary key Cuenta_pkey;
+              ^
+ERROR  : 12:49:47: ERROR:  error de sintaxis en o cerca de «constraint»
+LÍNEA 1: drop constraint Cuenta_pkey;
+              ^
+ERROR  : 12:50:45: ERROR:  no existe la restricción «cuenta_pkey» en la relación «Cuenta»
+ERROR  : 13:24:53: ERROR:  error de sintaxis en o cerca de «01»
+LÍNEA 1: insert into public."Cuenta" ("banco",01,10,2);
+                                              ^
+ERROR  : 13:25:40: ERROR:  error de sintaxis en o cerca de «1»
+LÍNEA 1: insert into public."Cuenta" ("banco",1,10,2);
+                                              ^
+ERROR  : 13:27:03: ERROR:  no existe la columna «banco»
+LÍNEA 1: insert into public."Cuenta" values ("banco",1,10,2);
+                                             ^
+ERROR  : 13:29:22: ERROR:  no existe la columna «descipcion» en la relación «Cuenta»
+LÍNEA 1: insert into public."Cuenta"(descipcion,categoria_balance,cat...
+                                     ^
+ERROR  : 13:29:33: ERROR:  no existe la columna «banco»
+LÍNEA 1: ...nce,categoria_estado_resultado,id_cuenta) values ("banco",1,...
+                                                              ^
+ERROR  : 13:36:35: ERROR:  no se permiten múltiples llaves primarias para la tabla «Registro_Cuenta»
+ERROR  : 13:37:07: ERROR:  no se permiten múltiples llaves primarias para la tabla «Registro_Cuenta»
+ERROR  : 13:39:36: ERROR:  no se permiten múltiples llaves primarias para la tabla «Registro_Cuenta»
+ERROR  : 13:41:14: ERROR:  error de sintaxis en o cerca de «constraint»
+LÍNEA 1: drop constraint pk_id_registro;
+              ^
+ERROR  : 13:46:02: ERROR:  no se permiten múltiples llaves primarias para la tabla «Registro_Cuenta»
+ERROR  : 13:50:04: ERROR:  la columna «fecha_modificacion» es de tipo date pero la expresión es de tipo integer
+LÍNEA 1: ...o,fecha_modificacion,saldo,id_cuenta) values ('1',02-01-2018...
+                                                              ^
+SUGERENCIA:  Necesitará reescribir la expresión o aplicarle una conversión de tipo.
+ERROR  : 13:51:00: ERROR:  la columna «fecha_modificacion» es de tipo date pero la expresión es de tipo integer
+LÍNEA 1: ...o,fecha_modificacion,saldo,id_cuenta) values ('1',02/01/2018...
+                                                              ^
+SUGERENCIA:  Necesitará reescribir la expresión o aplicarle una conversión de tipo.
+ERROR  : 13:51:41: ERROR:  la columna «fecha_modificacion» es de tipo date pero la expresión es de tipo integer
+LÍNEA 1: ...o,fecha_modificacion,saldo,id_cuenta) values ('1',2/1/2018,1...
+                                                              ^
+SUGERENCIA:  Necesitará reescribir la expresión o aplicarle una conversión de tipo.
+ERROR  : 13:52:00: ERROR:  la columna «fecha_modificacion» es de tipo date pero la expresión es de tipo integer
+LÍNEA 1: ...o,fecha_modificacion,saldo,id_cuenta) values ('1',2-1-2018,1...
+                                                              ^
+SUGERENCIA:  Necesitará reescribir la expresión o aplicarle una conversión de tipo.
+ERROR  : 13:53:01: ERROR:  error de sintaxis en o cerca de «selct»
+LÍNEA 1: selct * from Registro_Usuarios
+         ^
+ERROR  : 13:53:14: ERROR:  no existe la relación «registro_usuarios»
+LÍNEA 1: select * from Registro_Usuarios
+                       ^
+ERROR  : 13:53:30: ERROR:  no existe la relación «public.Registro_Usuarios»
+LÍNEA 1: select * from public."Registro_Usuarios";
+                       ^
+ERROR  : 13:56:53: ERROR:  falta una entrada para la tabla «Registro_cuenta» en la cláusula FROM
+LÍNEA 1: ...c."Registro_Cuenta" inner join public."Cuenta" on public."Re...
+                                                              ^
